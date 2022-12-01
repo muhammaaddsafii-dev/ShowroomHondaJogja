@@ -15,7 +15,8 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        //
+        $catalogs = Catalog::paginate(5);
+        return view('admin/catalog/index', ['catalogs' => $catalogs]);
     }
 
     /**
@@ -95,8 +96,9 @@ class CatalogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Catalog $catalogs)
     {
-        //
+        $catalogs->delete();
+        return redirect()->to('/catalog/listcatalog')->with('success', 'Katalog berhasil dihapus !');
     }
 }

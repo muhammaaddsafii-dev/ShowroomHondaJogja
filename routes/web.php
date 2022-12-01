@@ -52,10 +52,12 @@ Route::get('/admin', function () {
 Route::get('/car/create', 'CarController@create')->name('car.create');
 Route::post('/car/store', 'CarController@store')->name('car.store');
 Route::get('/car/listcar', 'CarController@index')->name('car.listcar');
+Route::delete('/car/{cars:slug}/delete', 'CarController@destroy')->name('car.deleteuser');
 
 Route::get('/catalog/create', 'CatalogController@create')->name('catalog.create');
 Route::post('/catalog/store', 'CatalogController@store')->name('catalog.store');
 Route::get('/catalog/listcatalog', 'CatalogController@index')->name('catalog.listcar');
+Route::delete('/catalog/{catalogs:slug}/delete', 'CatalogController@destroy')->name('catalog.deleteuser');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

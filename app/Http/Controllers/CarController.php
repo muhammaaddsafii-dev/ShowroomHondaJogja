@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Car;
+use App\Catalog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -15,6 +16,8 @@ class CarController extends Controller
      */
     public function index()
     {
+        $cars = Car::paginate(5);
+        return view('admin/car/index', ['cars' => $cars]);
     }
 
     /**
@@ -106,8 +109,9 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Car $cars)
     {
-        //
+        $cars->delete();
+        return redirect()->to('/car/listcar')->with('success', 'Data Mobil berhasil dihapus !');
     }
 }
