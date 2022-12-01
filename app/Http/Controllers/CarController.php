@@ -47,19 +47,19 @@ class CarController extends Controller
         $attr['slug'] = $slug;
 
         $thumbnail1 = request()->file('thumbnail1');
-        $thumbnailUrl1 = $thumbnail1->storeAs("images/photos", "{$slug}.{$thumbnail1->extension()}");
+        $thumbnailUrl1 = $thumbnail1->storeAs("images/photos", "{$slug}.'1'.{$thumbnail1->extension()}");
         $attr['thumbnail1'] = $thumbnailUrl1;
 
         $thumbnail2 = request()->file('thumbnail2');
-        $thumbnailUrl2 = $thumbnail2->storeAs("images/photos", "{$slug}.{$thumbnail2->extension()}");
+        $thumbnailUrl2 = $thumbnail2->storeAs("images/photos", "{$slug}.'2'.{$thumbnail2->extension()}");
         $attr['thumbnail2'] = $thumbnailUrl2;
 
         $thumbnail3 = request()->file('thumbnail3');
-        $thumbnailUrl3 = $thumbnail3->storeAs("images/photos", "{$slug}.{$thumbnail3->extension()}");
+        $thumbnailUrl3 = $thumbnail3->storeAs("images/photos", "{$slug}.'3'.{$thumbnail3->extension()}");
         $attr['thumbnail3'] = $thumbnailUrl3;
 
         $thumbnail4 = request()->file('thumbnail4');
-        $thumbnailUrl4 = $thumbnail4->storeAs("images/photos", "{$slug}.{$thumbnail4->extension()}");
+        $thumbnailUrl4 = $thumbnail4->storeAs("images/photos", "{$slug}.'4'.{$thumbnail4->extension()}");
         $attr['thumbnail4'] = $thumbnailUrl4;
 
         Car::create($attr);

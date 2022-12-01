@@ -159,9 +159,9 @@
                     </ul>
                 </div>
             </div>
-            @foreach ($cars as $car)
-                <div class="row car-filter">
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+            <div class="row car-filter">
+                @foreach ($cars as $car)
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix">
                         <div class="car__item">
                             <div class="car__item__pic__slider owl-carousel">
                                 <img src="{{ asset('storage/' . $car->thumbnail1) }}" alt="" />
@@ -194,8 +194,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </section>
     <!-- Car Section End -->
