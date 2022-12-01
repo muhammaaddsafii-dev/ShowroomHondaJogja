@@ -40,3 +40,24 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/admin', function () {
+    return view('/admin/admin');
+});
+
+Route::get('/car/create', 'CarController@create')->name('car.create');
+Route::post('/car/store', 'CarController@store')->name('car.store');
+Route::get('/car/listcar', 'CarController@index')->name('car.listcar');
+
+Route::get('/catalog/create', 'CatalogController@create')->name('catalog.create');
+Route::post('/catalog/store', 'CatalogController@store')->name('catalog.store');
+Route::get('/catalog/listcatalog', 'CatalogController@index')->name('catalog.listcar');
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/admin', function () {
+//         return view('admin');
+//     });
+// });
