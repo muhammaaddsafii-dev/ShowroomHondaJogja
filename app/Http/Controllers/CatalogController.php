@@ -46,6 +46,11 @@ class CatalogController extends Controller
         $slug = Str::slug($request->name);
         $attr['slug'] = $slug;
 
+        $thumbnail = request()->file('thumbnail');
+        $thumbnailUrl = $thumbnail->storeAs("images/photos", "{$slug}.{$thumbnail->extension()}");
+
+        $attr['thumbnail'] = $thumbnailUrl;
+
         Catalog::create($attr);
         return redirect()->to('/catalog/create')->with('success', 'Katalog berhasil dibuat !');
     }

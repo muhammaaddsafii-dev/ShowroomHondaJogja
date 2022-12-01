@@ -21,10 +21,10 @@ class CreateCarsTable extends Migration
             $table->string('speed');
             $table->string('seat');
             $table->string('price');
-            $table->string('thumbnail_1')->nullable();
-            $table->string('thumbnail_2')->nullable();
-            $table->string('thumbnail_3')->nullable();
-            $table->string('thumbnail_4')->nullable();
+            $table->string('thumbnail1')->nullable();
+            $table->string('thumbnail2')->nullable();
+            $table->string('thumbnail3')->nullable();
+            $table->string('thumbnail4')->nullable();
             $table->timestamps();
         });
     }

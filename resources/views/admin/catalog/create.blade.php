@@ -3,6 +3,11 @@
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="row">
+                @if (session('success'))
+                    <div class="ml-3 alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
@@ -34,8 +39,9 @@
                                         placeholder="Harga" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>File upload</label>
-                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <label class="font-weight-bold">Upload Foto</label>
+                                    <p>Tidak dapat mengupload foto dengan ukuran lebih dari 2MB</p>
+                                    <input type="file" name="thumbnail" id="thumbnail" class="file-upload-default">
                                     <div class="input-group col-xs-12">
                                         <input type="text" class="form-control file-upload-info" disabled
                                             placeholder="Upload Image">

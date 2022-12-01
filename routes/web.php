@@ -1,5 +1,7 @@
 <?php
 
+use App\Catalog;
+use App\Car;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +24,8 @@ Route::get('/index', function () {
 });
 
 Route::get('/car', function () {
-    return view('car');
+    $cars = Car::get();
+    return view('car', ['cars' => $cars]);
 });
 
 Route::get('/spesifikasi', function () {
@@ -30,7 +33,8 @@ Route::get('/spesifikasi', function () {
 });
 
 Route::get('/price', function () {
-    return view('price');
+    $catalogs = Catalog::get();
+    return view('price', ['catalogs' => $catalogs]);
 });
 
 Route::get('/about', function () {

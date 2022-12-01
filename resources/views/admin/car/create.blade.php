@@ -44,8 +44,9 @@
                                         placeholder="Harga" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>File upload</label>
-                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <label class="font-weight-bold">Upload Foto</label>
+                                    <p>Tidak dapat mengupload foto dengan ukuran lebih dari 2MB</p>
+                                    <input type="file" name="thumbnail1" id="thumbnail1" class="file-upload-default">
                                     <div class="input-group col-xs-12">
                                         <input type="text" class="form-control file-upload-info" disabled
                                             placeholder="Upload Image">
@@ -56,8 +57,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>File upload</label>
-                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <label class="font-weight-bold">Upload Foto</label>
+                                    <p>Tidak dapat mengupload foto dengan ukuran lebih dari 2MB</p>
+                                    <input type="file" name="thumbnail2" id="thumbnail2" class="file-upload-default">
                                     <div class="input-group col-xs-12">
                                         <input type="text" class="form-control file-upload-info" disabled
                                             placeholder="Upload Image">
@@ -68,8 +70,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>File upload</label>
-                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <label class="font-weight-bold">Upload Foto</label>
+                                    <p>Tidak dapat mengupload foto dengan ukuran lebih dari 2MB</p>
+                                    <input type="file" name="thumbnail3" id="thumbnail3" class="file-upload-default">
                                     <div class="input-group col-xs-12">
                                         <input type="text" class="form-control file-upload-info" disabled
                                             placeholder="Upload Image">
@@ -80,8 +83,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>File upload</label>
-                                    <input type="file" name="img[]" class="file-upload-default">
+                                    <label class="font-weight-bold">Upload Foto</label>
+                                    <p>Tidak dapat mengupload foto dengan ukuran lebih dari 2MB</p>
+                                    <input type="file" name="thumbnail4" id="thumbnail4" class="file-upload-default">
                                     <div class="input-group col-xs-12">
                                         <input type="text" class="form-control file-upload-info" disabled
                                             placeholder="Upload Image">

@@ -46,6 +46,22 @@ class CarController extends Controller
         $slug = Str::slug($request->name);
         $attr['slug'] = $slug;
 
+        $thumbnail1 = request()->file('thumbnail1');
+        $thumbnailUrl1 = $thumbnail1->storeAs("images/photos", "{$slug}.{$thumbnail1->extension()}");
+        $attr['thumbnail1'] = $thumbnailUrl1;
+
+        $thumbnail2 = request()->file('thumbnail2');
+        $thumbnailUrl2 = $thumbnail2->storeAs("images/photos", "{$slug}.{$thumbnail2->extension()}");
+        $attr['thumbnail2'] = $thumbnailUrl2;
+
+        $thumbnail3 = request()->file('thumbnail3');
+        $thumbnailUrl3 = $thumbnail3->storeAs("images/photos", "{$slug}.{$thumbnail3->extension()}");
+        $attr['thumbnail3'] = $thumbnailUrl3;
+
+        $thumbnail4 = request()->file('thumbnail4');
+        $thumbnailUrl4 = $thumbnail4->storeAs("images/photos", "{$slug}.{$thumbnail4->extension()}");
+        $attr['thumbnail4'] = $thumbnailUrl4;
+
         Car::create($attr);
         return redirect()->to('/car/create')->with('success', 'Data Mobil berhasil dibuat !');
     }

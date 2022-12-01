@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('/dashboard/vendors/feather/feather.css') }}">
     <link rel="stylesheet" href="{{ asset('/dashboard/vendors/ti-icons/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('/dashboard/vendors/css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard/vendors/select2/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard/vendors/select2-bootstrap-theme/select2-bootstrap.min.css') }}">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="{{ asset('/dashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
@@ -135,6 +137,17 @@
     <script src="{{ asset('/dashboard/js/dashboard.js') }}"></script>
     <script src="{{ asset('/dashboard/js/Chart.roundedBarCharts.js') }}"></script>
     <!-- End custom js for this page-->
+
+    <script src="{{ asset('/dashboard/vendors/typeahead.js/typeahead.bundle.min.js') }}"></script>
+    <script src="{{ asset('/dashboard/vendors/select2/select2.min.js') }}"></script>
+    <!-- End plugin js for this page -->
+
+    <!-- Custom js for this page-->
+    <script src="{{ asset('/dashboard/js/file-upload.js') }}"></script>
+    <script src="{{ asset('/dashboard/js/typeahead.js') }}"></script>
+    <script src="{{ asset('/dashboard/js/select2.js') }}"></script>
+    <!-- End custom js for this page-->
+</body>
 
 </body>
 

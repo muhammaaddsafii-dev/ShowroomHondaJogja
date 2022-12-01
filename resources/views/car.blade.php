@@ -159,404 +159,43 @@
                     </ul>
                 </div>
             </div>
-            <div class="row car-filter">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/Brio1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Brio2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Brio3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Brio4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda Brio </a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1120</span>
-                                        cc
-                                    </li>
-                                    <li>90ps/6000 rpm</li>
-                                    <li>
-                                        <span>4</span>
-                                        Seat
-                                    </li>
-                                </ul>
+            @foreach ($cars as $car)
+                <div class="row car-filter">
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
+                        <div class="car__item">
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="{{ asset('storage/' . $car->thumbnail1) }}" alt="" />
+                                <img src="{{ asset('storage/' . $car->thumbnail2) }}" alt="" />
+                                <img src="{{ asset('storage/' . $car->thumbnail3) }}" alt="" />
+                                <img src="{{ asset('storage/' . $car->thumbnail4) }}" alt="" />
                             </div>
-                            <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>
-                                    Rp.150 - 200
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/Mobilio1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Mobilio2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Mobilio3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Mobilio4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda Mobilio</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>118/6.600 rpm</li>
-                                    <li>
-                                        <span>6</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.190-250
-                                    <span>Jt</span>
-                                </h6>
+                            <div class="car__item__text">
+                                <div class="car__item__text__inner">
+                                    <h5><a href="/price">{{ $car->name }}</a></h5>
+                                    <ul>
+                                        <li>
+                                            <span>{{ $car->capacity }}</span>
+                                            cc
+                                        </li>
+                                        <li>{{ $car->speed }} rpm</li>
+                                        <li>
+                                            <span>{{ $car->seat }}</span>
+                                            Seat
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="car__item__price">
+                                    <span class="car-option sale">For Sale</span>
+                                    <h6>
+                                        {{ $car->price }}
+                                        <span>Jt</span>
+                                    </h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/BRV1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/BRV2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/BRV3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/BRV4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda BRV</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>120/6.600 rpm</li>
-                                    <li>
-                                        <span>6</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.270-340
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/HRV1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/HRV2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/HRV3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/HRV4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda HR-V</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.800</span>
-                                        cc
-                                    </li>
-                                    <li>140/6.500 rpm</li>
-                                    <li>
-                                        <span>5</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>
-                                    Rp.340-440
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/CRV1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/CRV2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/CRV3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/CRV4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda CR-V</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>190/5.600 rpm</li>
-                                    <li>
-                                        <span>6</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.500-660
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix ">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/city1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/city2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/city3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/city4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda City Hatchback</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>120/6.600 rpm</li>
-                                    <li>
-                                        <span>4</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>Rp.340
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/civichb1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civichb2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civichb3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civichb4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda Civic Hatchback</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>173/5.500 rpm</li>
-                                    <li>
-                                        <span>5</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.510
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix ">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/civic1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civic2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civic3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civic4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">All New Honda Civic RS </a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>178/6.000 rpm</li>
-                                    <li>
-                                        <span>5</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.577
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/NewCity1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/NewCity2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/NewCity3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/NewCity4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">All New Honda City</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>120/6.600 rpm</li>
-                                    <li>
-                                        <span>4</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.361
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/Acord1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Acord2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Acord3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/Acord4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">All New Honda Accord</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>1.500</span>
-                                        cc
-                                    </li>
-                                    <li>190/5.500 rpm</li>
-                                    <li>
-                                        <span>5</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>Rp. 760
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/odsey1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/odsey2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/odsey3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/odsey4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda Odyssey</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>2.300</span>
-                                        mi
-                                    </li>
-                                    <li>173/6.200</li>
-                                    <li>
-                                        <span>7</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option">For Sale</span>
-                                <h6>
-                                    Rp.900
-                                    <span>Jt</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix sale">
-                    <div class="car__item">
-                        <div class="car__item__pic__slider owl-carousel">
-                            <img src="{{ asset('/img/cars/Mobil/civicr1.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civicr2.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civicr3.jpg') }}" alt="" />
-                            <img src="{{ asset('/img/cars/Mobil/civicr4.jpg') }}" alt="" />
-                        </div>
-                        <div class="car__item__text">
-                            <div class="car__item__text__inner">
-                                <h5><a href="/price">Honda Civic R</a></h5>
-                                <ul>
-                                    <li>
-                                        <span>2.000</span>
-                                        cc
-                                    </li>
-                                    <li>310/6.500 rpm</li>
-                                    <li>
-                                        <span>4</span>
-                                        Seat
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="car__item__price">
-                                <span class="car-option sale">For Sale</span>
-                                <h6>
-                                    Rp. 1.18
-                                    <span>M</span>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <!-- Car Section End -->
